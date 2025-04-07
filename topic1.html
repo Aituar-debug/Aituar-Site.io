@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Основы программирования на C++</title>
+  <!-- Подключаем внешний файл стилей -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* =============== Комментарии =============== */
+    .comments-section {
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px;
+    }
+    .comments-section h2 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+    }
+    .comment {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    .comment-author {
+      font-weight: bold;
+      color: #27ae60;
+    }
+    .comment-date {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 5px;
+    }
+    .comment-text {
+      font-size: 14px;
+      color: #333;
+    }
+    .comment-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .comment-form input[type="text"],
+    .comment-form textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      resize: vertical;
+    }
+    .comment-form button {
+      align-self: flex-start;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #27ae60;
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .comment-form button:hover {
+      background-color: #2ecc71;
+    }
+
+    /* Стили для вставленных изображений и видео */
+    .topic-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .topic-images img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .topic-video {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .topic-video iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .topic-gallery table td img {
+      max-width: 150px; /* уменьшенная максимальная ширина изображений */
+      height: auto;
+    }
+    .topic-gallery table {
+      width: 50%;
+      table-layout: fixed;
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===================== Хедер ===================== -->
+  <header>
+    <div id="logo">
+      <a href="Main.html">
+        <img src="images/logo1.png" alt="MooN IT Logo">
+      </a>
+    </div>
+    <div id="header-right">
+      <div id="search">
+        <input type="text" placeholder="Поиск...">
+      </div>
+      <div class="auth-buttons">
+        <button type="button">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- ===================== Навигация ===================== -->
+  <nav>
+    <ul>
+      <li><a href="Main.html">В тренде</a></li>
+      <li><a href="Prog_page.html">Программирование</a></li>
+      <li><a href="Design_page.html">Дизайн</a></li>
+      <li><a href="404.html">Маркетинг</a></li>
+      <li><a href="404.html">Кибербезопасность</a></li>
+      <li><a href="404.html">Гаджеты</a></li>
+    </ul>
+  </nav>
+
+  <!-- =============== Основной контент: Карточка темы + Конспект =============== -->
+<div class="discussion-topics">
+  <div class="topic-card">
+    <h2>Основы программирования на C++</h2>
+    <p>
+      C++ – это мощный язык программирования, используемый для разработки высокопроизводительных приложений,
+      игр, системного программного обеспечения и многого другого. Его особенности, такие как статическая типизация,
+      управление памятью и поддержка объектно-ориентированного программирования, делают его незаменимым инструментом
+      в арсенале разработчика.
+    </p>
+    <p>
+      Одним из ключевых преимуществ C++ является возможность прямого управления ресурсами, что позволяет создавать
+      эффективные и оптимизированные программы. В языке реализованы такие концепции, как наследование, полиморфизм,
+      инкапсуляция и абстракция, что способствует созданию модульного и масштабируемого кода.
+    </p>
+    <p>
+      Кроме того, C++ активно используется в разработке игр благодаря своей производительности и гибкости. Современные
+      игровые движки, такие как Unreal Engine, используют C++ для реализации критически важных функций, обеспечивая
+      высокое качество графики и быстродействие. В дополнение к этому, язык широко применяется в разработке приложений
+      для финансовой и научной сфер, где требуется максимальная эффективность и надежность.
+    </p>
+    <p>
+      Преодоление сложностей, связанных с управлением памятью, и освоение идиоматических конструкций C++ требует
+      значительного опыта, но результаты оправдывают затраченные усилия. Современные стандарты, такие как C++11, C++14,
+      C++17 и C++20, привнесли множество улучшений, включая лямбда-выражения, автоматическое управление памятью и
+      улучшенные контейнеры, что делает язык еще более удобным для повседневного программирования.
+    </p>
+
+    <!-- Таблица для фотогалереи с уменьшенными размерами ячеек -->
+        <div class="topic-gallery">
+          <table>
+            <tr>
+              <td>
+                <a href="https://avatars.dzeninfra.ru/get-zen_doc/3630864/pub_6409bc3cf51604314ade81bc_6409bc4e90d3b011ec84d958/scale_1200" target="_blank">
+                  <img src="https://avatars.dzeninfra.ru/get-zen_doc/3630864/pub_6409bc3cf51604314ade81bc_6409bc4e90d3b011ec84d958/scale_1200" alt="Пример кода 1">
+                </a>
+              </td>
+              <td>
+                <a href="https://cs10.pikabu.ru/post_img/2018/04/01/6/1522573190162752815.png" target="_blank">
+                  <img src="https://cs10.pikabu.ru/post_img/2018/04/01/6/1522573190162752815.png" alt="Пример кода 2">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBM8Tc-w5c8lbJ6P_wICVuOYYqp38kLXU4zQ&s" target="_blank">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBM8Tc-w5c8lbJ6P_wICVuOYYqp38kLXU4zQ&s" alt="C++ Логотип">
+                </a>
+              </td>
+              <td>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrhVw_kGBDnlmIH4jSOwyFpzLPvX68BSf5TQ&s" target="_blank">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrhVw_kGBDnlmIH4jSOwyFpzLPvX68BSf5TQ&s" alt="Пример кода 3">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+  </div>
+</div>
+
+
+  <!-- =============== Комментарии =============== -->
+  <div class="comments-section">
+    <h2>Комментарии</h2>
+
+    <!-- Пример уже существующих комментариев -->
+    <div class="comment">
+      <div class="comment-author">Программист_99</div>
+      <div class="comment-date">2025-03-25 09:30</div>
+      <div class="comment-text">
+        Отличное введение в C++! Очень понравилось, как разобраны основные концепции.
+      </div>
+    </div>
+
+    <div class="comment">
+      <div class="comment-author">CodeMaster</div>
+      <div class="comment-date">2025-03-26 14:10</div>
+      <div class="comment-text">
+        Спасибо за подробное описание. Видео и примеры кода очень помогли разобраться в теме!
+      </div>
+    </div>
+
+    <!-- Форма для добавления нового комментария -->
+    <form class="comment-form" action="#" method="post">
+      <input type="text" name="username" placeholder="Ваше имя" required>
+      <textarea name="comment" rows="4" placeholder="Ваш комментарий" required></textarea>
+      <button type="submit">Оставить комментарий</button>
+    </form>
+  </div>
+
+  <!-- ===================== Единый футер ===================== -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>Ваш аккаунт</h3>
+        <ul>
+          <li><a href="404.html">Войти</a></li>
+          <li><a href="404.html">Регистрация</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Информация</h3>
+        <ul>
+          <li><a href="404.html">Правила сайта</a></li>
+          <li><a href="404.html">Для авторов</a></li>
+          <li><a href="404.html">Для компаний</a></li>
+          <li><a href="404.html">Список обновлений</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Услуги</h3>
+        <ul>
+          <li><a href="404.html">Корпоративный блог</a></li>
+          <li><a href="404.html">Медийная реклама</a></li>
+          <li><a href="404.html">Партнерские программы</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MooN IT. Все права защищены.</p>
+      <p>Email: info@moonit.ru | Телефон: +7 (495) 123-45-67</p>
+    </div>
+  </footer>
+</body>
+</html>

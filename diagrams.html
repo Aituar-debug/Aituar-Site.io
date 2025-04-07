@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MooN IT - Сообщество для Айтишников</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Увеличиваем отступы вокруг диаграмм */
+    .charts-container {
+      margin: 50px auto;
+      max-width: 1200px;
+    }
+    /* Отодвигаем футер вниз */
+    footer {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===================== Хедер ===================== -->
+  <header>
+    <div id="logo">
+      <a href="Main.html"><img src="images/logo1.png" alt="MooN IT Logo"></a>
+    </div>
+    <div id="header-right">
+      <div id="search">
+        <input type="text" placeholder="Поиск...">
+      </div>
+      <div class="auth-buttons">
+        <button type="button">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- ===================== Навигация ===================== -->
+  <nav>
+    <ul>
+      <li><a href="Main.html">В тренде</a></li>
+      <li><a href="Prog_page.html">Программирование</a></li>
+      <li><a href="Design_page.html">Дизайн</a></li>
+      <li><a href="404.html">Маркетинг</a></li>
+      <li><a href="404.html">Кибербезопасность</a></li>
+      <li><a href="404.html">Гаджеты</a></li>
+    </ul>
+  </nav>
+
+  <!-- Контейнер диаграмм -->
+  <div class="charts-container">
+    <div class="chart-wrapper">
+      <canvas id="doughnutChart"></canvas>
+    </div>
+    <div class="chart-wrapper">
+      <canvas id="radarChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // Инициализация диаграммы Doughnut (распределение посещений по разделам сайта)
+    const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+    new Chart(ctxDoughnut, {
+      type: 'doughnut',
+      data: {
+        labels: ['В тренде', 'Программирование', 'Дизайн', 'Гаджеты', 'Маркетинг'],
+        datasets: [{
+          label: 'Посещения',
+          data: [150, 100, 75, 50, 125],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: { enabled: true },
+          legend: { position: 'top' }
+        },
+        animation: { animateScale: true, animateRotate: true }
+      }
+    });
+    
+    // Инициализация диаграммы Radar (метрики вовлечённости пользователей)
+    const ctxRadar = document.getElementById('radarChart').getContext('2d');
+    new Chart(ctxRadar, {
+      type: 'radar',
+      data: {
+        labels: ['Новые посещения', 'Возвраты', 'Время на сайте', 'Глубина просмотра', 'Вовлечённость'],
+        datasets: [{
+          label: 'Наш сайт',
+          data: [100, 80, 90, 70, 85],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+        },
+        {
+          label: 'Среднее по отрасли',
+          data: [90, 70, 80, 60, 75],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: { enabled: true },
+          legend: { position: 'top' }
+        },
+        animation: { animateScale: true, animateRotate: true },
+        scales: {
+          r: {
+            angleLines: { display: true },
+            suggestedMin: 0,
+            suggestedMax: 100
+          }
+        }
+      }
+    });
+  </script>
+
+  <!-- ===================== Единый футер ===================== -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>Ваш аккаунт</h3>
+        <ul>
+          <li><a href="404.html">Войти</a></li>
+          <li><a href="404.html">Регистрация</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Информация</h3>
+        <ul>
+          <li><a href="404.html">Правила сайта</a></li>
+          <li><a href="diagrams.html">Статистика сайта</a></li>
+          <li><a href="404.html">Для авторов</a></li>
+          <li><a href="404.html">Для компаний</a></li>
+          <li><a href="404.html">Список обновлений</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Услуги</h3>
+        <ul>
+          <li><a href="404.html">Корпоративный блог</a></li>
+          <li><a href="404.html">Медийная реклама</a></li>
+          <li><a href="404.html">Партнерские программы</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MooN IT. Все права защищены.</p>
+      <p>Email: info@moonit.ru | Телефон: +7 (495) 123-45-67</p>
+    </div>
+  </footer>
+</body>
+</html>
